@@ -1,0 +1,60 @@
+/* App.css */
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #f0f0f0;
+  --accent-color: #1f93ff;
+  --border-color: #444;
+  --card-bg: #2c2c2c;
+}
+
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --accent-color: #1f93ff;
+  --border-color: #ddd;
+  --card-bg: #f4f4f4;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App {
+  max-width: 500px;
+  width: 100%;
+  margin: 60px auto 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+}
+
+.theme-toggle {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}

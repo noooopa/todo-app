@@ -1,0 +1,63 @@
+.TodoItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+  animation: fadeIn 0.4s ease;
+}
+
+.TodoItem input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent-color);
+}
+
+.TodoItem .content {
+  flex: 1;
+}
+
+.TodoItem .date {
+  font-size: 14px;
+  color: #999;
+}
+
+.TodoItem button {
+  cursor: pointer;
+  color: var(--accent-color);
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.TodoItem button:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .TodoItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .TodoItem .date {
+    font-size: 12px;
+  }
+}
